@@ -4,15 +4,15 @@ var position;
 var locoChild;
 function setup(){
     createCanvas(500,500);
-    ball = createSprite(250,250,10,10);
-    ball.shapeColor = "red";
+    ball = createSprite(250,250,30,30);
+    ball.shapeColor = "Green";
     database = firebase.database();
     locoChild = database.ref('ball/position');
     locoChild.on("value",readPosition , showError);
 }
 
 function draw(){
-    background("white");
+    background(black");
     if(position!== undefined)
     if(keyDown(LEFT_ARROW)){
         writePosition(-1,0);
